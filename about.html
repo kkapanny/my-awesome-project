@@ -6,6 +6,7 @@
 	<title>О нас - Название вашего сайта</title>
 	<meta name="description" content="Узнайте больше о нашей компании и истории">
 	<link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 	<header>
@@ -14,16 +15,17 @@
 			<ul>
 				<li><a href="index.html">Главная</a></li>
 				<li><a href="about.html">О нас</a></li>
-				<li><a href="contacts.html">Контакты</a></li>
+				<li><a href="sign_up.html">Записаться</a></li>
 			</ul>
 		</nav>
 	</header>
 
 	<main>
 		<!-- Простые "хлебные крошки" -->
-		<nav aria-label="Хлебные крошки">
-			<a href="index.html">Главная</a> →
-			<span>О нас</span>
+		<nav class="breadcrumbs" aria-label="Хлебные крошки">
+			<a href="index.html" class="breadcrumbs_link">Главная</a>
+			<span class="breadcrumbs_strelka">→</span>
+			<span class="breadcrumbs_current">О нас</span>
 		</nav>
 
 		<h1>О нашей компании</h1>

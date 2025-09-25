@@ -1,50 +1,140 @@
-
-</html><!DOCTYPE html>
+</html>
+<!DOCTYPE html>
 <html lang="ru">
+
 <head>
+	<link rel="stylesheet" href="styles.css">
+	<script src="main.js" defer></script>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Главная - Название вашего сайта</title>
 	<meta name="description" content="Краткое описание главной страницы вашего сайта">
 	<link rel="icon" href="assets/favicon.ico" type="image/x-icon">
 </head>
+
 <body>
 	<!-- Шапка сайта -->
 	<header>
-		<a href="assets/favicon.ico">Логотип или название сайта</a>
+		<!-- <a href="assets/favicon.ico">Логотип или название сайта</a> -->
 		<!-- Главное меню навигации -->
-		<nav>
-			<ul>
-				<li><a href="index.html">Главная</a></li>
-				<li><a href="about.html">О нас</a></li>
-				<li><a href="contacts.html">Контакты</a></li>
+		<a class="header_logo" href="/">
+			<img src="assets/favicon.ico" alt="Логотип" class="header_logo-image">
+			<span class="header_logo-text">Твой репетитор по математике Валентина Николавена</span>
+		</a>
+		<nav class="nav header_nav">
+			<ul class="nav_list">
+				<li class="nav_item">
+					<a href="index.html" class="nav_link">Главная</a>
+				</li>
+				<li class="nav_item">
+					<a href="about.html" class="nav_link">О нас</a>
+				</li>
+				<li class="nav_item">
+					<a href="price.html" class="nav_link">Цены и услуги</a>
+				</li>
+				<li class="nav_item">
+					<a href="sign_up.html" class="nav_link">Записаться на занятие</a>
+				</li>
 			</ul>
 		</nav>
+		<button id="themeToggle" class="theme-toggle" aria-label="Переключить светлую и тёмную тему">
+        <svg class="theme-toggle__icon theme-toggle__icon--sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+            <path d="M12 17a5 5 0 1 0 0-10 5 5 0 0 0 0 10zm0-12a.75.75 0 0 0 .75-.75V2a.75.75 0 0 0-1.5 0v2.25c0 .414.336.75.75.75zm0 15a.75.75 0 0 0-.75.75V22a.75.75 0 0 0 1.5 0v-2.25A.75.75 0 0 0 12 20zM4.222 5.222a.75.75 0 0 0 1.06 0l1.5-1.5a.75.75 0 0 0-1.06-1.06l-1.5 1.5a.75.75 0 0 0 0 1.06zm14.496 14.496a.75.75 0 0 0 1.06 0l1.5-1.5a.75.75 0 1 0-1.06-1.06l-1.5 1.5a.75.75 0 0 0 0 1.06zM2 12a.75.75 0 0 0 .75.75H5a.75.75 0 0 0 0-1.5H2.75A.75.75 0 0 0 2 12zm17 0a.75.75 0 0 0 .75-.75V9a.75.75 0 0 0-1.5 0v2.25c0 .414.336.75.75.75zm-7 7a.75.75 0 0 0-.75.75V22a.75.75 0 0 0 1.5 0v-2.25A.75.75 0 0 0 12 19zM5.282 19.718a.75.75 0 0 0 0-1.06l-1.5-1.5a.75.75 0 0 0-1.06 1.06l1.5 1.5a.75.75 0 0 0 1.06 0zm14.496-14.496a.75.75 0 0 0 0-1.06l-1.5-1.5a.75.75 0 1 0-1.06 1.06l1.5 1.5a.75.75 0 0 0 1.06 0z"/>
+        </svg>
+        <svg class="theme-toggle__icon theme-toggle__icon--moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+            <path d="M11.38 2.019a7.5 7.5 0 1 0 10.6 10.6A9.996 9.996 0 0 1 12.001 22C6.477 22 2 17.523 2 12c0-5.315 4.146-9.66 9.38-9.98z"/>
+        </svg>
+    </button>
 	</header>
 
 	<!-- Уникальное основное содержимое страницы -->
 	<main>
-		<h1>Добро пожаловать на наш сайт!</h1>
+		<h1>Добро пожаловать на сайт!</h1>
 
 		<!-- Секция 1 с якорем -->
 		<section id="services">
 			<h2>Наши услуги</h2>
 			<p>Описание предоставляемых услуг...</p>
-			<a href="contacts.html">Связаться с нами</a> <!-- Якорная ссылка внутри страницы -->
+			<a href="#contacts">Связаться с нами</a> <!-- Якорная ссылка внутри страницы -->
 		</section>
 
 		<!-- Секция 2 с якорем -->
 		<section id="portfolio">
 			<h2>Портфолио</h2>
-			<p>Примеры наших работ...</p>
+			<p>Примеры конспектов занятий:</p>
+			<!-- Браузер сам выбирает лучший ресурс по ширине контейнера -->
+			<!-- <img src="assets/porfolio.jpg" srcset="assets/porfolio-640.jpg 640w, assets/porfolio-960.jpg 960w, assets/porfolio-1280.jpg
+				1280w" sizes="(max-width: 700px) 92vw, (max-width: 1200px) 640px, 960px" alt="Проект: макет мобильного приложения"
+				loading="lazy" style="max-width: 100%; height:auto;"> -->
+			<img src="assets/konspect1.jpg" sizes="(max-width: 700px) 92vw, (max-width: 1200px) 33vw, 33vw" alt="Проект: макет мобильного приложения"
+				loading="lazy" style="max-width: 25%; width: 100%; height: auto;">
+			<img src="assets/konspect2.jpg" sizes="(max-width: 700px) 92vw, (max-width: 1200px) 33vw, 33vw" alt="Проект: макет мобильного приложения"
+				loading="lazy" style="max-width: 25%; width: 100%; height: auto;">
+			<p>Запись одного из уроков:</p>
+			<!-- Добавьте субтитры через <track> (WebVTT); poster — превью-кадр -->
+			<video class="media" controls preload="metadata" playsinline
+			width="1280" height="616" style="max-width:30%; height: auto;">
+			<source src="video/online-lesson.mp4" type="video/mp4">
+			Ваш браузер не поддерживает видео.
+			</video>
 		</section>
 
 		<!-- Секция 3 с якорем -->
 		<section id="contacts">
 			<h2>Контактная информация</h2>
 			<p>Наши контакты...</p>
-			<a href="contacts.html">Подробнее</a> <!-- Ссылка на отдельную страницу -->
+			<a href="sign_up.html">Подробнее</a> <!-- Ссылка на отдельную страницу -->
 		</section>
+
+		<!-- Кнопка открытия модалки -->
+		<button id="openDialog" type="button">Связаться со мной</button>
+
+		<!-- Модалка с формой -->
+		<dialog id="contactDialog" class="modal" aria-labelledby="dialogTitle">
+			<div class="modal_content">
+				<h2 id="dialogTitle" class="modal_title">Обратная связь</h2>
+
+				<form id="contactForm" class="form" method="dialog" novalidate></form>
+				<div class="form_group">
+					<label for="name" class="form_label">Имя</label>
+					<input id="name" name="name" type="text" class="form_input" required minlength="2"
+						autocomplete="given-name">
+				</div>
+				<div class="form_group">
+					<label for="email" class="form_label">E-mail</label>
+					<input id="email" name="email" type="email" class="form_input" requiredautocomplete="email">
+				</div>
+				<div class="form_group">
+					<label for="phone" class="form_label">Телефон</label>
+					<input id="phone" name="phone" type="tel" class="form_input" inputmode="tel" autocomplete="tel"
+						aria-describedby="phoneHelp" placeholder="+7 (___) ___-__" required
+						pattern="^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$">
+					<small id="phoneHelp" class="form_help">Формат: +7 (900) 000-00-00</small>
+				</div>
+				<div class="form_group">
+					<label for="date" class="form_label">Дата</label>
+					<input id="date" name="date" type="date" class="form_input">
+				</div>
+				<div class="form_group">
+					<label for="topic" class="form_label">Тема</label>
+					<select id="topic" name="topic" class="form_select" required>
+						<option value="">Выберите тему</option>
+						<option value="enroll">Записаться на занятие</option>
+						<option value="question">Задать вопрос</option>
+						<option value="review">Оставить отзыв</option>
+					</select>
+				</div>
+				<div class="form_group">
+					<label for="message" class="form_label">Сообщение</label>
+					<textarea id="message" name="message" rows="4" class="form_textarea" required></textarea>
+				</div>
+				<div class="form_actions">
+					<button type="button" id="closeDialog" class="form_button_second">Закрыть</button>
+					<button type="submit" class="form_button_prime">Отправить</button>
+				</div>
+				</form>
+			</div>
+		</dialog>
 	</main>
 
 	<!-- Подвал сайта -->
@@ -53,4 +143,5 @@
 		<p>Телефон: +7 (123) 456-78-90</p>
 	</footer>
 </body>
+
 </html>

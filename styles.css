@@ -1,10 +1,15 @@
 :root {
     /* Палитра */
     --color-bg: #fff;
+    /* цвет фон */
     --color-fg: #0b0b0b;
+    /* цвет текста */
     --color-muted: #666;
+    /* второстепенный */
     --color-primary: #0a84ff;
+    /* акцентный */
     --color-danger: #b00020;
+    /* ошибки */
 
     /* Типографика и размеры */
     --font-body: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
@@ -47,6 +52,12 @@
 }
 
 .header_nav {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+}
+
+.header_controls {
     display: flex;
     align-items: center;
     gap: var(--space-3);
@@ -144,7 +155,7 @@ label {
     margin: 0.5rem 0 0.25rem;
 }
 
-.modal{
+.modal {
     padding: 0;
     border: none;
     border-radius: var(--radius);
@@ -335,6 +346,7 @@ dialog::backdrop {
 .section {
     padding-block: var(--space-5);
 }
+
 .section__title {
     margin: 0 0 var(--space-3);
 }
@@ -360,7 +372,7 @@ body.theme-dark {
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
-    margin-left: var(--space-3);
+    margin-left: auto;
 }
 
 .theme-toggle:hover {
@@ -379,19 +391,24 @@ body.theme-dark {
     position: absolute;
 }
 
-/* Показываем солнце по умолчанию (в светлой теме) */
+/* Показываем луну по умолчанию (в светлой теме) */
 .theme-toggle__icon--moon {
-    opacity: 0;
-    transform: rotate(-90deg);
+    opacity: 1;
+    transform: rotate(0);
 }
 
-/* В тёмной теме скрываем солнце и показываем луну */
-body.theme-dark .theme-toggle__icon--sun {
+.theme-toggle__icon--sun {
     opacity: 0;
     transform: rotate(90deg);
 }
 
+/* В тёмной теме скрываем луну и показываем солнце */
 body.theme-dark .theme-toggle__icon--moon {
+    opacity: 0;
+    transform: rotate(-90deg);
+}
+
+body.theme-dark .theme-toggle__icon--sun {
     opacity: 1;
     transform: rotate(0);
 }
